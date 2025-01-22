@@ -296,7 +296,6 @@ But, for illustrative purposes, let's calculate the correlation coefficient betw
 Start with `dino_data` and calculate a summary statistic that we will call `r` as the `cor`relation between `x` and `y`.
 ```
 
-
 ```{r}
 dino_data %>%
   summarize(r = cor(x, y))
@@ -317,6 +316,7 @@ star_data <- datasaurus_dozen %>%
 ggplot(data = star_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
+
 ```{r}
 star_data %>%
   summarize(r = cor(x, y))
@@ -327,6 +327,23 @@ The `r` for `star` is just slightly larger than the the `r` for `dino`. However,
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Added answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 4.  Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
+
+```{r}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+```
+
+```{r fig.fullwidth=TRUE}
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+```{r}
+circle_data %>%
+  summarize(r = cor(x, y))
+```
+**r = -0.06834336**
+The `r` of `circle` is slightly smaller than the `r` of `dino`. They are both negative.
 
 🧶 ✅ ⬆️ *You should pause again, commit changes with the commit message "Added answer for Ex 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
