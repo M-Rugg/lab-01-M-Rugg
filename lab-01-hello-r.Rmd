@@ -1,17 +1,21 @@
 ---
 title: "Lab 01 - Hello R!"
 author: "Moriah Ruggerio"
-output: 
-  html_document: 
+output:
+  pdf_document: 
+    latex_engine: xelatex
+    fig_width: 5
+    fig_height: 5
+  tufte::tufte_html:
+    css: ../lab.css
+    tufte_variant: envisioned
+    highlight: pygments
+  html_document:
     fig_width: 5
     theme: readable
-  #tufte::tufte_html:
-    #css: ../lab.css
-    #tufte_variant: "envisioned"
-    #highlight: pygments
 link-citations: true
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: sentence
 ---
 
