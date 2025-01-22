@@ -6,10 +6,10 @@ output:
     latex_engine: xelatex
     fig_width: 5
     fig_height: 5
-  tufte::tufte_html:
-    css: ../lab.css
-    tufte_variant: envisioned
-    highlight: pygments
+  #tufte::tufte_html:
+    #css: ../lab.css
+    #tufte_variant: envisioned
+    #highlight: pygments
   html_document:
     fig_width: 5
     theme: readable
